@@ -26,7 +26,7 @@
                <!-- <a class="subscribe-button" href="#">Subscribe</a> -->
             </div>
             <div class="col-4 text-center">
-                <a class="blog-header-logo text-dark" href="#"> BlogL♥ver </a>
+                <a class="blog-header-logo text-dark" href="#"> BlogL<span style="color:red;">♥</span>ver </a>
             </div>
             <div class="col-4 d-flex justify-content-end align-items-center">
                <!-- <a class="text-muted" href="#">
