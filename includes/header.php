@@ -41,7 +41,7 @@
         <nav class="nav d-flex">
             <a class="p-2 text-muted borderstyle " href="index.php"> <span class="selector">╣</span> Home <span class="selector">╠</span></a>
             <a class="p-2 text-muted borderstyle " href="posts.php"> <span class="selector">╣</span> All Posts <span class="selector">╠</span></a>
-            <a class="p-2 text-muted borderstyle " href="index.php"> <span class="selector">╣</span> Admin <span class="selector">╠</span></a>
+            <a class="p-2 text-muted borderstyle " href="admin/index.php"> <span class="selector">╣</span> Admin <span class="selector">╠</span></a>
 
         </nav>
 
