@@ -228,6 +228,22 @@ div.alignright{
     background : #238b45;
     border-color: #238b45;
 }
+
+
+.btn.btn-primary{
+    color: #fff;
+    background : #2aa653;
+    border-color: #2aa653;
+}
+.btn.btn-primary:focus , .btn.btn-primary:hover{
+    color: #fff;
+    background : #238b45;
+    border-color: #238b45;
+}
+
+
+
+
 .btn.btn-outline-secondary{
     color: #2aa653;
     border-color: #2aa653;
@@ -237,15 +253,36 @@ div.alignright{
     background : #238b45;
     border-color: #238b45;
 }
+
+
+
 .btn.btn-outline-secondary.disabled{
     color: #75f48a;
     border-color: #75f48a;
 }
 
 
+
+a.btn.btn-default{
+    color: #2aa653;
+    border-color: #2aa653;
+}
+a.btn.btn-default:focus , a.btn.btn-default:hover{
+    color: #fff;
+    background : #238b45;
+    border-color: #238b45;
+}
+
+
+
 nav.blog-pagination{
     justify-content: space-between ;
     display: flex ;
 
+}
+
+.justify-content-between{
+    justify-content: space-between ;
+    display: flex ;
 }
 
