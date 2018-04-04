@@ -55,16 +55,17 @@
 
 
         <?php endwhile;  ?>
+        <nav class="blog-pagination">
+            <a class="btn btn-outline-primary" href="#"> Older</a>
+            <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
+        </nav>
+
     <?php   else :   ?>
-        <p>There is no post here.<p>
+        <p class="text-center font-italic">There is no post here.<p>
     <?php   endif;   ?>
 
 
 
-            <nav class="blog-pagination">
-                <a class="btn btn-outline-primary" href="#"> Older</a>
-                <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
-            </nav>
 
 
 

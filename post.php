@@ -53,7 +53,7 @@ if(isset($_GET['id'])){
         </div><!-- /.blog-post -->
 
     <?php   else :   ?>
-        <p>There is no post here.<p>
+        <p class="text-center font-italic">There is no post here.<p>
     <?php   endif;   ?>
 
 

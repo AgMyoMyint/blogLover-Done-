@@ -13,7 +13,7 @@
         <ol class="list-unstyled mb-0">
             <?php if($categories) : ?>
                 <?php while($row = $categories->fetch_assoc()) : ?>
-                    <li><a href="#"><?php echo $row['name']; ?> </a></li>
+                    <li><a href="posts.php?category=<?php echo $row['id']; ?>"><?php echo $row['name']; ?> </a></li>
                 <?php endwhile; ?>
             <?php endif; ?>
         </ol>
