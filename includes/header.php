@@ -39,10 +39,10 @@
 
     <div class="nav-scroller py-1 mb-2">
         <nav class="nav d-flex">
-            <a class="p-2 text-muted borderstyle" href="#">Home</a>
-            <a class="p-2 text-muted borderstyle" href="#">All Posts</a>
+            <a class="p-2 text-muted borderstyle" href="index.php">Home</a>
+            <a class="p-2 text-muted borderstyle" href="posts.php">All Posts</a>
 
-            <a class="p-2 text-muted borderstyle" href="#">Admin</a>
+            <a class="p-2 text-muted borderstyle" href="index.php">Admin</a>
 
         </nav>
 
@@ -92,3 +92,8 @@
 
     -->
 </div>
+
+<main role="main" class="container">
+    <div class="row">
+        <div class="col-md-8 blog-main">
+
