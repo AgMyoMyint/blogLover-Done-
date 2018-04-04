@@ -286,3 +286,7 @@ nav.blog-pagination{
     display: flex ;
 }
 
+.justify-content-end{
+    justify-content: flex-end ;
+    display: flex ;
+}
