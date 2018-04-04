@@ -35,6 +35,7 @@
                     </p>
 
                     <?php echo $row['body']; ?>
+                    <?php echo shortenText($row['body'] ); ?>
 
                     <div class="alignright">
                         <a class="continue-reading" href="post.php"> Continue reading >> </a>
