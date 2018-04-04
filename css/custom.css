@@ -218,3 +218,35 @@ div.alignright{
 .custFont{
     font-family: "Calibri";
 }
+
+.btn.btn-outline-primary{
+    color: #2aa653;
+    border-color: #2aa653;
+}
+.btn.btn-outline-primary:focus , .btn.btn-outline-primary:hover{
+    color: #fff;
+    background : #238b45;
+    border-color: #238b45;
+}
+.btn.btn-outline-secondary{
+    color: #2aa653;
+    border-color: #2aa653;
+}
+.btn.btn-outline-secondary:focus , .btn.btn-outline-secondary:hover{
+    color: #fff;
+    background : #238b45;
+    border-color: #238b45;
+}
+.btn.btn-outline-secondary.disabled{
+    color: #75f48a;
+    border-color: #75f48a;
+}
+
+
+nav.blog-pagination{
+    justify-content: space-between ;
+    display: flex ;
+
+}
+
+=
