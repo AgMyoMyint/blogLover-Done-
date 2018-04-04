@@ -26,7 +26,7 @@
                <!-- <a class="subscribe-button" href="#">Subscribe</a> -->
             </div>
             <div class="col-4 text-center">
-                <a class="blog-header-logo text-dark" href="#"> BlogL<span style="color:red;">♥</span>ver </a>
+                <a class="blog-header-logo text-dark" href="#"> ⸎BlogL<span style="color:red;">♥</span>ver⸎</a>
             </div>
             <div class="col-4 d-flex justify-content-end align-items-center">
                <!-- <a class="text-muted" href="#">
@@ -39,10 +39,9 @@
 
     <div class="nav-scroller py-1 mb-2">
         <nav class="nav d-flex">
-            <a class="p-2 text-muted borderstyle" href="index.php">Home</a>
-            <a class="p-2 text-muted borderstyle" href="posts.php">All Posts</a>
-
-            <a class="p-2 text-muted borderstyle" href="index.php">Admin</a>
+            <a class="p-2 text-muted borderstyle " href="index.php"> <span class="selector">╣</span> Home <span class="selector">╠</span></a>
+            <a class="p-2 text-muted borderstyle " href="posts.php"> <span class="selector">╣</span> All Posts <span class="selector">╠</span></a>
+            <a class="p-2 text-muted borderstyle " href="index.php"> <span class="selector">╣</span> Admin <span class="selector">╠</span></a>
 
         </nav>
 

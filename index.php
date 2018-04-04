@@ -16,13 +16,21 @@
     $posts = $db->select($query);
 
 
+
+    //Create Query
+    $query = "Select * from categories";
+
+    //Run Query
+    $categories = $db->select($query);
+
+
 ?>
 
     <?php   if($posts):   ?>
         <?php while($row = $posts->fetch_assoc()) : ?>
 
             <div class="blog-post">
-                    <h3 class="blog-post-title"><?php echo $row['title']; ?> </h3>
+                    <h4 class="blog-post-title"><?php echo $row['title']; ?> </h4>
                     <p class="blog-post-meta">
 
 
@@ -37,7 +45,9 @@
                     <?php echo shortenText($row['body'] ); ?>
 
                     <div class="alignright">
-                        <a class="continue-reading" href="post.php"> Continue reading >> </a>
+                        <a class="continue-reading" href="post.php?id=<?php echo urlencode($row["id"]); ?>">
+                            Read More >>
+                        </a>
                     </div>
 
                 </div><!-- /.blog-post -->

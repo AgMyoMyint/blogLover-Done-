@@ -2,23 +2,25 @@
 
 <aside class="col-md-4 blog-sidebar">
     <div class="p-3 mb-3 bg-light rounded">
-        <h4 class="">About</h4>
+        <h4 class="custFont">About </h4>
         <p class="mb-0">
-            Just a developer who love arts...</p>
+            <?php echo $about; ?>
+        </p>
     </div>
 
     <div class="p-3">
-        <h4 class="">Categories</h4>
+        <h4 class="custFont">Categories</h4>
         <ol class="list-unstyled mb-0">
-            <li><a href="#">News</a></li>
-            <li><a href="#">Tutorial</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Misc</a></li>
+            <?php if($categories) : ?>
+                <?php while($row = $categories->fetch_assoc()) : ?>
+                    <li><a href="#"><?php echo $row['name']; ?> </a></li>
+                <?php endwhile; ?>
+            <?php endif; ?>
         </ol>
     </div>
 
     <div class="p-3">
-        <h4 class="">Profile</h4>
+        <h4 class="custFont">Profile</h4>
         <ol class="list-unstyled">
             <li><a href="#">GitHub</a></li>
             <li><a href="#">Twitter</a></li>

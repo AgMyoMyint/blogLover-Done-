@@ -110,7 +110,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .blog-post-title {
     margin-bottom: .25rem;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    color: #404040;
+
+
 }
 .blog-post-meta {
     margin-bottom: 1.25rem;
@@ -178,8 +181,8 @@ nav.nav.d-flex>a{
     line-height: 1.9;
     display: block;
     height:40px;
-
 }
+
 nav.nav.d-flex>a.borderstyle:hover{
 
     color : #2aa653 !important;
@@ -210,4 +213,8 @@ div.alignright{
     justify-content: flex-end;
     align-items: center;
 
+}
+
+.custFont{
+    font-family: "Calibri";
 }

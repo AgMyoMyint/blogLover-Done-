@@ -4,3 +4,4 @@
     define('DB_PASS','');
     define('DB_NAME','blog');
 
+    $about = 'Just a developer who love arts...';
