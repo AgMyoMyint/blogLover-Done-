@@ -1,4 +1,6 @@
 <?php
+    include 'config/config.php';
+    include 'libraries/Database.php';
     include 'includes/header.php';
 ?>
 <main role="main" class="container">
