@@ -2,6 +2,7 @@
     include 'config/config.php';
     include 'libraries/Database.php';
     include 'includes/header.php';
+    include 'helpers/format_helper.php';
 ?>
 <?php
 
@@ -24,7 +25,8 @@
                     <h3 class="blog-post-title"><?php echo $row['title']; ?> </h3>
                     <p class="blog-post-meta">
 
-                        <?php echo $row['date']; ?> by
+
+                        <?php echo formatDate($row['date']); ?> by
 
                         <a href="#">
                             <?php echo $row['author']; ?>
