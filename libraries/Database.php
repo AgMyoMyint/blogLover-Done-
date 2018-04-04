@@ -15,11 +15,13 @@ class Database{
     /*
      * Class Constructor
      */
-    public function __construct(){
-        $this->host = $host;
+    public function __construct(    /* $host,$username,$password,$db_name */    ){
+
+      /*  $this->host = $host;
         $this->username = $username;
         $this->password = $password;
         $this->db_name = $db_name;
+      */
 
         //Call Connect Function
         $this->connect();
