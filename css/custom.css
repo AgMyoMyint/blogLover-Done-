@@ -290,3 +290,22 @@ nav.blog-pagination{
     justify-content: flex-end ;
     display: flex ;
 }
+
+.error{
+    width: 100%;
+    background: #ffc2af;
+    border-radius: 5px;
+    border : 1px solid #cd4749;
+    color: #cd4749;
+    padding: 7px;
+}
+
+.success{
+    width: 100%;
+    background: #a1f1a3;
+    border-radius: 5px;
+    border : 1px solid #238b45;
+    color: #238b45;
+    padding: 7px;
+
+}

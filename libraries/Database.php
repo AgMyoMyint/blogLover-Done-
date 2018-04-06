@@ -1,8 +1,5 @@
 <?php
 
-
-
-
 class Database{
     public $host = DB_HOST;
     public $username = DB_USER;
@@ -22,10 +19,8 @@ class Database{
         $this->password = $password;
         $this->db_name = $db_name;
       */
-
         //Call Connect Function
         $this->connect();
-
     }
 
     /*
@@ -38,6 +33,7 @@ class Database{
             $this->error = "Connection Failed: ".$this->link->connect_error ;
             return false;
         }
+
     }
 
 
@@ -58,15 +54,17 @@ class Database{
      */
     public function insert($query){
         $insert_row = $this->link->query($query) or die($this->link->error._LINE_);
-
         //Validate
         if($insert_row){
-            header("Location: index.php?msg=".urlencode('Record Added'));
-        }else{
-            die('Error: ('.$this->link->errno .')'.$this->link->error);
-        }
-    }
 
+            header("Location: index.php?msg=".urlencode('Record Added'));
+            return $insert_row;
+        }else{
+            return false;
+
+        }
+
+    }
 
 
     /*
@@ -77,7 +75,7 @@ class Database{
 
         //Validate
         if($update_row){
-            header("Location: index.php?msg=".urlencode('Record Updateed'));
+            header("Location: index.php?msg=".urlencode('Record Updated'));
         }else{
             die('Error: ('.$this->link->errno .')'.$this->link->error);
         }
@@ -88,7 +86,7 @@ class Database{
      * Delete
      */
     public function delete($query){
-        $delete_row = $this->link->query($query) or die($this->link->error._LINE_);
+        $delete_row = $this->link->query($query) or die($this->link->error);
 
         //Validate
         if($delete_row){

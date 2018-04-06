@@ -5,32 +5,68 @@ include '../admin/includes/header.php';
 include '../helpers/format_helper.php';
 ?>
 <?php
+//Create DB Obj
+$db = new Database();
+
+$id = $_GET['id'];
 
 
-if(isset($_GET['id'])){
+
+/*
+ * Initialize
+ */
+//Create Query
+$query = "Select * from categories where id =  $id";
+//Run Query
+$categories = $db->select($query);
+$category = $categories->fetch_assoc();
+
+
+/*
+ * Edit Category
+ */
+if(isset($_POST['submit'])){
     $id = $_GET['id'];
 
-    //Create DB Obj
-    $db = new Database();
+    $name = mysqli_real_escape_string($db->link, $_POST['name']);
 
+    if($name==""  ){
+        $error = "Please fill out all required fields";
 
+    }else{
+        $query = "UPDATE categories SET name = '$name' WHERE id=$id";
 
-    //Create Query
-    $query = "Select * from categories where id =  $id";
+        $insert_no = $db->update($query);
 
-    //Run Query
-    $categories = $db->select($query);
-    $category = $categories->fetch_assoc();
+    }
 }
 
 
+
+/*
+ * Delete Category
+ */
+if(isset($_POST['delete'])){
+
+    $id = $_GET['id'];
+
+    $query = "Delete from categories WHERE id=$id";
+
+    $insert_no = $db->delete($query);
+}
 
 ?>
 
 <h2 class=""> Edit Category</h2>
 <br>
 
-<form method="post" action="edid_category.php">
+<form method="post" action="edid_category.php?id=<?php echo $category['id']; ?>" >
+    <?php if(isset($error)) : ?>
+        <div class="form-group">
+            <label class="error"> <?php echo $error; ?> </label>
+
+        </div>
+    <?php endif; ?>
 
 
 
@@ -52,6 +88,6 @@ if(isset($_GET['id'])){
 
 
 <?php
-include 'includes/footer.php';
+include '../admin/includes/footer.php';
 ?>
 

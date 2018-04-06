@@ -10,12 +10,36 @@ include '../helpers/format_helper.php';
 $db = new Database();
 
 
+/*
+ * Add Category
+ */
+if(isset($_POST['submit'])){
+
+    $name = mysqli_real_escape_string($db->link, $_POST['name']);
+
+    if($name==""  ){
+        $error = "Please fill out all required fields";
+
+    }else{
+        $query = "Insert into categories(name) VALUES ('$name') ";
+
+        $insert_no = $db->update($query);
+    }
+}
+
+
 ?>
 
 <h2 class="">  Add New Category</h2>
 <br>
 
 <form method="post" action="add_category.php">
+    <?php if(isset($error)) : ?>
+        <div class="form-group">
+            <label class="error"> <?php echo $error; ?> </label>
+        </div>
+    <?php endif; ?>
+
     <div class="form-group">
         <label for="exampleInputEmail1">Category Name : </label>
         <input name="name" type="text" class="form-control" placeholder="Enter Category name ">
@@ -33,6 +57,6 @@ $db = new Database();
 
 
 <?php
-include 'includes/footer.php';
+include '../admin/includes/footer.php';
 ?>
 
